@@ -1,0 +1,2 @@
+#! /bin/bash
+echo $(($(find .-mindepth 1 -typed d |wc -l)-2))

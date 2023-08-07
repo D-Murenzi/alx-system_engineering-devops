@@ -1,0 +1,2 @@
+#! /bin/bash
+passws -S | awk -F '''{print "user: "$1"\t Home Directory: "$9}'|sort
