@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'ibase=water'"WATER" 'ibase=stir'"STIR" | bc $((WATER+STIR))
+echo 'ibase=water'"WATER" 'ibase=stir'"STIR" | 'obase=bestchol' $((WATER+STIR))| 
