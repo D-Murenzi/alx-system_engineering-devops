@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#displays numbers 1- 100, fizz for multiples of 3
+#BUzz for multiples of 5 and FizzBuss for multiple of 3 and 5
+var1="Buzz"
+var2="Fizz"
+var3="FizzBuzz"
+for a in {1..100}
+do
+if [ $((a%3)) -eq 0 ] && [ $((a%5)) -ne 0 ]
+then
+echo "$var2"
+elif [ $((a%5)) -eq 0 ] && [ $((a%3)) -ne 0 ]
+then
+echo "$var1"
+elif [ $((a%5)) -eq 0 ] && [ $((a%3)) -eq 0 ]
+then
+echo "$var3"
+else
+echo "$a"
+fi
+done
