@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# display content of directory
+
+for a in $(find . ! -name ".*" | cut -d '-' -f 2);
+do
+echo "$a"
+done
