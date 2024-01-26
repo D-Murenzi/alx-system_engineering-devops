@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# prints a loop 10times
+
+var1="Best School"
+var2="bad luck"
+var3="good luck"
+a=1
+while [ $a -le 10 ];
+do
+if  [ $a == 4 ]
+then
+echo "$var2"
+elif [ $a == 8 ]
+then
+echo "$var3"
+else
+echo "$var1"
+fi
+((a+=1))
+done
