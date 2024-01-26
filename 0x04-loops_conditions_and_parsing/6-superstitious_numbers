@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# uses case statement
+var1="bad luck from China"
+var2="bad luck from Japan"
+var3="bad luck from Italy"
+a=1
+while [ $a -le 20 ]
+do
+echo "$a"
+case $a in
+4)
+echo "$var1"
+;;
+9)
+echo "$var2"
+;;
+17)
+echo "$var3"
+;;
+*)esac
+((a+=1))
+done
