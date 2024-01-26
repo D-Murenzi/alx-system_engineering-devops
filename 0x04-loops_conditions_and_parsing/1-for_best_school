@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# this scripts prints bestschool ten times usinf for loop
+var="Best School"
+for _ in {1..10};
+do
+echo "$var"
+done
