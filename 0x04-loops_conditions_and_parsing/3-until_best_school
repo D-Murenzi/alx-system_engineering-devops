@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# prints bestcholl 10times using until loop
+var="Best School"
+b=0
+until [ $b == 10 ];
+do
+echo "$var"
+((b += 1))
+done
