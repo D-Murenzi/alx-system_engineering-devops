@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 #prints best school and hi on 9th iteration
-
+b=0
 var="Best School"
-for i in {1..10};
+while [ $b -lt 10 ]
 do
-if [ "$i" == 9 ];
+if [ "$b" == 8 ];
 then
 echo "Hi"
 else
 echo "$var"
 fi
+((b+=1))
 done
