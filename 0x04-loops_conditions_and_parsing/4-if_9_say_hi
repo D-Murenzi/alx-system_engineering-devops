@@ -4,11 +4,10 @@ b=0
 var="Best School"
 while [ $b -lt 10 ]
 do
+echo "$var"
 if [ "$b" == 8 ];
 then
 echo "Hi"
-else
-echo "$var"
 fi
 ((b+=1))
 done
