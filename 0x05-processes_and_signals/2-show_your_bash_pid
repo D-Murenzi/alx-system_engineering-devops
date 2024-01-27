@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#prints the processes with bash name
+#shellcheck disable=SC2009
+ps -H u -C bash
