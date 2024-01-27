@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#displays the running process in user
+#format and those with or without TTYs
+
+ps -e -H u
