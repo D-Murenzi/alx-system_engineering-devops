@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#this program prints the pids of bash with a full list
+pgrep -l bash
