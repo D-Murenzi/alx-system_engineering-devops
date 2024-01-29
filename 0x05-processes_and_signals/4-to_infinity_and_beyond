@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #this prog displays "To infinity and beyond" for infinity
 #with a pause of 2sec
-while [ true ]
+while true
 do
 echo "To infinity and beyond"
 sleep 2s
