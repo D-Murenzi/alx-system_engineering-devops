@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#this program displays the listenning sockets
+
+netstat -dlp
