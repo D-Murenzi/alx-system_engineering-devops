@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#this script changes the ipadress of localhost and that of facebook in hosts file
+
+cp /etc/hosts ~/hosts.new
+sed -i -r 's/^[0-9.]+[[:space:]]+localhost/127.0.0.2\tlocalhost/g' ~/hosts.new
+sed -i -r 's/^[0-9.]+[[:space:]]+facebook.com/8.8.8.8\tfacebook.com/g' ~/hosts.new
+cat ~/hosts.new > /etc/hosts
