@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#this script establishes a connection to localhost
+
+nc -l localhost 98
