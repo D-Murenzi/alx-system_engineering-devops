@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#this script prints the ip adresses of all ipv4 network interface on machine
+
+ifconfig -a | grep 'inet '> iptemp
+sed -i -r 's/[[:space:]]+/\-/g' iptemp
+cut -f3 iptemp -d-
+rm iptemp
