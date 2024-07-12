@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#This script creates public_private key
+
+ssh-keygen -b 4096  -f school -N betty
