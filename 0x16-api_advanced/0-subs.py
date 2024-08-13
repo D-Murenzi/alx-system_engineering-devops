@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This module contains a function that returns a number of subscribers on
+This module contains a function that returns a number of subscribers on.
+
 a given sub-reddit.
 """
 
@@ -9,7 +10,6 @@ import requests
 
 def number_of_subscribers(subreddit):
     """Return number of subscribers to the subreddit."""
-
     url = 'https://www.reddit.com/r/{}/about.json'.format(subreddit)
     header = {
         }
