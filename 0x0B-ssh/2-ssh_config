@@ -54,10 +54,10 @@ Host *
     GSSAPIAuthentication yes
 
 Host 494073-web-01
-     Hostname 34.224.94.253
+     Hostname 35.174.204.133
      PasswordAuthentication no
      IdentityFile ~/.ssh/school
 
-Host 34.224.94.253
+Host 35.174.204.133
      PasswordAuthentication no
      IdentityFile ~/.ssh/school
