@@ -11,7 +11,7 @@ then
 	sudo apt-get -y install nginx
 fi
 
-printf "%sCeci n%sest pas une page%s" '"' "'" '"'> tem
+printf "Ceci n%sest pas une page\n\n\n" "'" > tem
 sudo cp tem /var/www/html/custom_404.html
 rm tem
 printf 'server { 
