@@ -6,19 +6,21 @@ idea="Status: install ok installed"
 
 if [ "$status" != "$idea" ];
 then
-    sudo apt-get update
-    sudo apt-get -y install nginx
+	echo "not installed but installing"
+	sudo apt-get update
+	sudo apt-get -y install nginx
 fi
 
-
-printf 'server { 
+printf "server { 
        listen 80;
-       server_name dmurenzi.tech;
+       server_name dmurenzi.tech 35.174.204.133 3.83.18.3 35.175.132.191;
+
+       add_header X-Served-By \$hostname;
 
        location / {
-              return 200 "Hello World!";
+       		return 200 'Hello World!';
        }
-}' > /tmp/hbnb_static.conf
+}\n" > /tmp/hbnb_static.conf
 sudo cp /tmp/hbnb_static.conf /etc/nginx/conf.d/hbnb_stat.conf
 rm /tmp/hbnb_static.conf
 sudo nginx -s reload
