@@ -9,9 +9,9 @@ file { '/etc/nginx/conf.d/hbnb_stat.conf':
 ensure   => file,
 content  => "server {
      listen 80;
-     server_name dmurenzi.tech;
+     server_name ~^(.*)$;
 
-     location / {
+     location =/ {
      	      return 200 'Hello World!';
 	      }
      location /redirect_me {
