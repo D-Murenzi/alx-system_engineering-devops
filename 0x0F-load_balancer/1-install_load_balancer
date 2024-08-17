@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+#This script installs haproxy and configure it to balance connect to servers.
+
+command=$(dpkg --status haproxy | grep Status)
+idea_str="Status: install ok installed"
+
+if [ "$command" != "$idea_str" ];
+then
+	sudo apt-get update
+	sudo apt-get install haproxy
+fi
+
+printf 'frontend hbnb_static
+       bind 35.175.132.191:80
+       mode http
+       use_backend web_static
+       default_backend web_static
+
+backend web_static
+       balance roundrobin
+       mode http
+       server 494073-web-01 35.174.204.133:80 check
+       server 494073-web-02 3.83.18.3:80 check
+
+' > tem
+sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.bak
+sudo sh -c 'cat tem >> /etc/haproxy/haproxy.cfg'
+rm tem
+sudo systemctl reload haproxy
