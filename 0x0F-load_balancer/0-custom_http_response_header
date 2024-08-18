@@ -6,7 +6,6 @@ idea="Status: install ok installed"
 
 if [ "$status" != "$idea" ];
 then
-	echo "not installed but installing"
 	sudo apt-get update
 	sudo apt-get -y install nginx
 fi
