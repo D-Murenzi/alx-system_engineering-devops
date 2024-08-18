@@ -9,7 +9,8 @@ file { '/etc/haproxy/haproxy.cfg':
 ensure   => 'file',
 owner    => 'root',
 group    => 'root',
-content  => 'global
+content  => @("EOF")
+global
      log /dev/log    local0
      log /dev/log    local1 notice
      chroot /var/lib/haproxy
@@ -44,7 +45,7 @@ defaults
      errorfile 503 /etc/haproxy/errors/503.http
      errorfile 504 /etc/haproxy/errors/504.http
 frontend hbnb_static
-     bind 35.175.132.191:80
+     bind 0.0.0.0:80
      mode http
      use_backend web_static
      default_backend web_static
@@ -54,7 +55,8 @@ backend web_static
      mode http
      server 494073-web-01 35.174.204.133:80 check
      server 494073-web-02 3.83.18.3:80 check
-',
+EOF
+,
   notify => service['haproxy'],
 }
 

@@ -11,7 +11,7 @@ then
 fi
 
 printf 'frontend hbnb_static
-       bind 35.175.132.191:80
+       bind 0.0.0.0:80
        mode http
        use_backend web_static
        default_backend web_static
