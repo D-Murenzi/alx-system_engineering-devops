@@ -7,6 +7,6 @@ expect="Status: install ok installed"
 if [ "$stat" != "$expect" ];
 then
 	sudo apt-get update
-	sudo apt-get install nginx
+	sudo apt-get install -y nginx
 fi
 sudo service nginx start
