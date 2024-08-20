@@ -1,12 +1,7 @@
 #!/usr/bin/env bash
 #This script sets nginx to listen on port 80.
-
-stat=$(dpkg --status nginx | grep Status)
-expect="Status: install ok installed"
-
-if [ "$stat" != "$expect" ];
-then
-	sudo apt-get update
-	sudo apt-get install -y nginx
-fi
+sudo apt-get purge nginx
+sudo apt-get autoremove
+sudo apt-get update
+sudo apt-get install -y nginx
 sudo service nginx start
